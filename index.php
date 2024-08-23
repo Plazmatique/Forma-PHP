@@ -14,7 +14,6 @@ else{
     echo 'false';
 }
 
-
 if($name == 'World') :
     echo 'true';
  else :
