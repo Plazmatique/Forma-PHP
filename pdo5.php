@@ -2,16 +2,21 @@
 require_once'config.php';
 $sql = 'SELECT * FROM contacts';
 $contactRq = $connect->prepare($sql);
-var_dump($contactRq);
+//var_dump($contactRq);
 $contactRq->execute() or die($connect->errorInfo()); //tue le script si la requête est mauvaise
 
 echo $nbContacts = $contactRq->rowCount();
 
 $contacts = [];
 
+echo '<ol>';
+
 while ($row = $contactRq->fetch(PDO::FETCH_ASSOC)) {
   $contacts[] = $row;
+  echo '<li>' . $row['lastname'] . '</li>';
 }
+
+echo '</ol>';
 
 //$contacts = $contactRq->fetchAll(PDO::FETCH_ASSOC);
 
