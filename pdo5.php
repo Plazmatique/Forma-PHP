@@ -7,7 +7,13 @@ $contactRq->execute() or die($connect->errorInfo()); //tue le script si la requÃ
 
 echo $nbContacts = $contactRq->rowCount();
 
-$contacts = $contactRq->fetchAll(PDO::FETCH_ASSOC);
+$contacts = [];
+
+while ($row = $contactRq->fetch(PDO::FETCH_ASSOC)) {
+  $contacts[] = $row;
+}
+
+//$contacts = $contactRq->fetchAll(PDO::FETCH_ASSOC);
 
 echo '<pre>';
 var_dump($contacts);
