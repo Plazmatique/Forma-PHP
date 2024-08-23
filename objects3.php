@@ -1,7 +1,7 @@
 <?php 
 declare(strict_types= 1); // !!! SINON PAS DE VARIABLES STRICTES !!!
 class Personne{
-    //<php 8
+    //php <8
     /*
     private string $nom = 'doe';
     private static string $prenom = 'john';
@@ -18,7 +18,7 @@ class Personne{
     private const TEST = "test";
     private static int $nbPersons = 0;
     private static string $prenom = "doe";
-
+    //php >8
     public function __construct(private string $nom, private bool $inscription, private int $age) {
       self::$nbPersons++;
     }
