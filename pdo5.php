@@ -9,7 +9,6 @@ echo $nbContacts = $contactRq->rowCount();
 
 $contacts = [];
 
-
 echo '<ol>';
 
 while ($row = $contactRq->fetch(PDO::FETCH_ASSOC)) {
