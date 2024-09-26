@@ -1,5 +1,6 @@
 <?php
 require_once'config.php';
+
 $sql = 'SELECT * FROM contacts';
 $contactRq = $connect->prepare($sql);
 //var_dump($contactRq);
